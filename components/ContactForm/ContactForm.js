@@ -64,7 +64,7 @@ const ContactForm = () => {
 
     emailjs
       .send(
-        'service_my3snd5',
+        'service_xaggurf',
         'template_4rj8let',
         params,
         'user_gn7hNUi1KB9jeyD2T016F',
