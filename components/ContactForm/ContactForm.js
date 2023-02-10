@@ -107,7 +107,7 @@ const ContactForm = () => {
             <div className={style.content}>
               <p>
                 Need to get in touch? Please feel free to drop me line below and
-                I'll respond as soon as possible.
+                I&aposll respond as soon as possible.
               </p>
             </div>
           </Row>

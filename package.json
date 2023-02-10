@@ -25,7 +25,6 @@
     "require-path": "^0.3.0"
   },
   "devDependencies": {
-    "postcss-loader": "^7.0.2",
     "prettier": "^2.7.1",
     "sass": "^1.57.1"
   }
