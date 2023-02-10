@@ -176,17 +176,27 @@ const ContactForm = () => {
           </div>
         </form>
       ) : (
-        <ReCAPTCHA
-          sitekey="6Lfng2caAAAAAPH3mUIJVnJRqA7maIMWOdsTz0t2"
-          onChange={sendEmail}
-        />
+        <Container>
+          <Row>
+            <div className={style.content}>
+              <ReCAPTCHA
+                sitekey="6Lfng2caAAAAAPH3mUIJVnJRqA7maIMWOdsTz0t2"
+                onChange={sendEmail}
+              />
+            </div>
+          </Row>
+        </Container>
       )}
     </Container>
   ) : (
-    <div>
-      <h3>{formSubmitted.title}</h3>
-      <p>{formSubmitted.paragraph}</p>
-    </div>
+    <Container>
+      <Row>
+        <div className={style.content}>
+          <h3>{formSubmitted.title}</h3>
+          <p>{formSubmitted.paragraph}</p>
+        </div>
+      </Row>
+    </Container>
   )
 }
 
