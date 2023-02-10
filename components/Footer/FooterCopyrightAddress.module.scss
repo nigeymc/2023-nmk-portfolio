@@ -1,0 +1,37 @@
+@use '/styles/variables';
+
+.footerGroup {
+    color: variables.$primary-white;
+    width: 100%;
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+
+    .footerCopyright {
+        width: 100%;
+        font-size: 1.2rem;
+        padding-left: variables.$space-sm;
+        padding-top: variables.$space-md;
+    }
+
+    .footerAddress {
+        padding-left: variables.$space-lg;
+    }
+
+    @media screen and (max-width: 768px) {
+        .footerCopyright {
+            padding: 15px 0;
+            font-size: variables.$font-size-sm;
+        }
+
+        .footerAddress {
+            padding-left: 0;
+        }
+    }
+}
+

@@ -1,0 +1,239 @@
+@use '/styles/variables';
+
+.headerNav {
+  margin: 0;
+  padding: 0;
+  border-top: solid 10px variables.$primaryBlue;
+  border-bottom: solid 10px variables.$primaryBlue;
+
+  .mobileMenu {
+    display: none;
+  }
+
+  .mainNav {
+    background: variables.$primaryBlue;
+    width: 100%;
+    height: 60px;
+    text-align: right;
+
+    @media screen and (max-width: 768px) {
+
+      .mobileMenu {
+        position: absolute;
+        right: 15px;
+        top: 25px;
+        z-index: 99;
+        display: block;
+
+        input {
+          display: block;
+        }
+      }
+
+      input.hamburgerMenu {
+        opacity: 0;
+        z-index: 1;
+        width: 30px;
+        height: 30px;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        -webkit-appearance: none;
+          -moz-appearance: none;
+                appearance: none;
+        cursor: pointer;
+        top: 0;
+        right: 5px;
+      }
+  
+      .bars {
+        right: 5px;
+        position: absolute;
+        width:30px;
+        height: 35.3333333333333333px;
+        padding-top: 4.7368px;
+        border-radius: 10px;
+        -webkit-transition: background-color 0.2s,  -webkit-transform 0.3s ease-in-out;
+        transition: background-color 0.2s,  -webkit-transform 0.3s ease-in-out;
+        -o-transition: background-color 0.2s,  transform 0.3s ease-in-out;
+        transition: background-color 0.2s,  transform 0.3s ease-in-out;
+        transition: background-color 0.2s,  transform 0.3s ease-in-out,  -webkit-transform 0.3s ease-in-out;
+
+
+          .bar {
+            width: 30px;
+            height: 4px;
+            margin-bottom: 5.3333333333333333px;
+            background: #fff;
+            -webkit-transition: color 0.5s linear, -webkit-transform 0.2s ease-in-out;
+            transition: color 0.5s linear, -webkit-transform 0.2s ease-in-out;
+            -o-transition: color 0.5s linear, -webkit-transform 0.2s ease-in-out;
+            -o-transition: transform 0.2s ease-in-out, color 0.5s linear;
+            transition: transform 0.2s ease-in-out, color 0.5s linear;
+            transition: transform 0.2s ease-in-out, color 0.5s linear, -webkit-transform 0.2s ease-in-out;
+            border-radius: 20px;
+            -moz-transition: color 0.5s linear, -webkit-transform 0.2s ease-in-out;
+            -ms-transition: color 0.5s linear, -webkit-transform 0.2s ease-in-out;
+          }
+      }
+
+      input:checked + .bars {
+        -webkit-transform: rotate(270deg);
+            -ms-transform: rotate(270deg);
+                transform: rotate(270deg);
+      }
+  
+      input:checked + .bars {
+        .bar:first-child {
+          -webkit-transform: rotate(45deg) translate(7px, 6.33333333333333333px);
+          -ms-transform: rotate(45deg) translate(7px, 6.33333333333333333px);
+          transform: rotate(45deg) translate(7px, 6.33333333333333333px);
+          -moz-transform: rotate(45deg) translate(7px, 6.33333333333333333px);
+          -o-transform: rotate(45deg) translate(7px, 6.33333333333333333px);
+
+        }
+      }
+  
+      input:checked + .bars {
+        .bar:nth-child(2) {
+          -webkit-transform-origin: 50% 50%;
+              -ms-transform-origin: 50% 50%;
+                  transform-origin: 50% 50%;
+          -webkit-transform: rotate(-45deg);
+              -ms-transform: rotate(-45deg);
+                  transform: rotate(-45deg);
+        }
+      }
+  
+      input:checked + .bars {
+        .bar:last-child {
+          -webkit-transform: rotate(45deg) translate(-7px,-6.33333333333333333px);
+          -ms-transform: rotate(45deg) translate(-7px,-6.33333333333333333px);
+          transform: rotate(45deg) translate(-7px,-6.33333333333333333px);
+          -moz-transform: rotate(45deg) translate(-7px,-6.33333333333333333px);
+          -o-transform: rotate(45deg) translate(-7px,-6.33333333333333333px);
+        }
+      }
+  
+}
+    
+    .desktopNav {
+      margin: 0;
+      padding: 4px 0 2px;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-pack: right;
+      -ms-flex-pack: right;
+      justify-content: right;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-around;
+      width: 100%;
+      height: 60px;
+      list-style: none;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+     
+      li {
+        width: auto;
+        padding: 2px 5px;
+
+        a {          
+          text-decoration: none;
+          letter-spacing: 1px;
+
+          &:focus {
+            outline: 5px solid #00847C !important;
+            padding: 20px 0;
+            border-radius: 10px;
+          }
+
+            span {
+              color: variables.$pinkAccent;
+              text-decoration: none;
+              font-size: variables.$font-size-sm;
+              padding: 20px 20px;
+              border-radius: 10px;
+              font-weight: 700;
+
+              &:hover {
+                background-color: variables.$pinkAccent;
+                color: variables.$primaryBlue;
+              }
+            }
+        }
+      }
+    }
+
+    .menuWrapper { 
+      display: block;
+    }
+    
+    .hideMenu {
+        right: -100vw;
+        -webkit-transition: right 1s;
+        -o-transition: right 1s;
+        transition: right 1s;
+      }
+
+      .showMenu {
+        width: 100%;
+        right: 0;
+        visibility: visible;
+        -webkit-transition: right 1s;
+        -o-transition: right 1s;
+        transition: right 1s;
+      }
+        
+
+    @media screen and (max-width: 768px) {
+
+      .menuNav {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column;
+                flex-flow: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center !important;
+        overflow-y: scroll;
+        list-style: none;
+        position: fixed;
+        top: 0;
+        background: variables.$primaryBlue;
+        bottom: 0;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        z-index: 9;
+
+        a {
+          span {
+              display: block;
+              padding: 15px 40px;
+              margin: 5px 40px;
+              text-decoration: none;
+              color: variables.$pinkAccent;
+              background-color: variables.$primaryBlue;
+              text-transform: uppercase;
+              font-weight: bold;
+              font-size: variables.$font-size-lg !important;
+              text-align: center;
+              border-radius: 10px;
+          }
+        }
+
+
+        li:first-child {
+          margin-top: 7rem;
+        }
+      }
+    
+    }
+  }
+}

@@ -1,0 +1,109 @@
+@use '/styles/variables';
+
+.content {
+    padding: 25px 15px;
+    color: variables.$primaryBlue;
+    font-size: variables.$font-size-md;
+}
+
+.contactForm {
+    padding: 3rem;
+    margin: 3rem 0;
+    border: 1rem solid variables.$primaryBlue;
+    -o-border-image: -o-repeating-linear-gradient(45deg, transparent, transparent 5px, variables.$primaryBlue 6px, variables.$primaryBlue 15px, transparent 16px, transparent 20px) 20/1rem;
+    border-image: repeating-linear-gradient(45deg, transparent, transparent 5px, variables.$primaryBlue 6px, variables.$primaryBlue 15px, transparent 16px, transparent 20px) 20/1rem;
+    
+    .formGroup {
+        margin-bottom: 1rem;
+        position: relative;
+
+        label {
+            color: variables.$primaryBlue;
+            
+        }
+
+        .name, .email {
+            position: absolute;
+            top: 6px;
+            left: 28px;
+        }
+
+        .subject {
+            position: absolute;
+            top: 6px;
+            left: 13px;
+        }
+
+        .message {
+            position: relative;
+            left: 13px;
+            top: -5px;
+        }
+    
+        .formControl {
+            display: block;
+            width: 100%;
+            height: calc(1.5em + 0.75rem + 2px);
+            padding: 0.375rem 0.75rem 0.375rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: variables.$primaryBlue;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+            transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+            -o-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+
+            &:focus {
+                outline: 5px solid variables.$greenAccent !important;
+            }
+        }
+
+        .formControl[name="name"], .formControl[name="email"] {
+            padding-left: 4rem;
+        }
+    
+        .formControl[name="subject"] {
+            padding-left: 4.6rem;
+        }
+
+        textarea.formControl {
+            height: auto;
+        }
+
+        .button {
+            width: auto;
+            height: 48px;
+            display: -webkit-inline-box;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            background-color: variables.$primaryBlue;
+            text-align: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            padding: 8px 16px;
+            border: solid 5px transparent;
+            color: variables.$pinkAccent;
+            cursor: pointer;
+
+
+            &:hover, &:active {
+                background-color: variables.$pinkAccent;
+                border: solid 5px variables.$primaryBlue;
+                padding: 8px 16px;
+                color: variables.$primaryBlue;
+
+                a {
+                    color: variables.$pinkAccent;
+                }
+            }
+
+        }
+    }
+}

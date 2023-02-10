@@ -1,0 +1,35 @@
+@use '/styles/variables';
+
+.introBlock {
+    background: variables.$grey;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='458' height='286' viewBox='0 0 458 286' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M283.5 0C126.927 0 0 128.047 0 286L457.5 286L457.5 60.1877C409.468 22.4668 349.085 0 283.5 0Z' fill='%233b726f'/%3E%3C/svg%3E");
+    @media screen and (max-width: 768px) {
+        background-image: none;
+    }
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 387px;
+    @media screen and (max-width: 1250px) {
+        background-size: 307px;
+    }
+    width: 100%;
+    padding: 30px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    
+
+    .downloadableFiles {
+        a {
+            color: variables.$primaryBlue !important;
+        }
+    }
+
+    .introBlockContainer {
+        width: 100%;
+    }
+}

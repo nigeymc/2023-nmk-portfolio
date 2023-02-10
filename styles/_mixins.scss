@@ -1,0 +1,13 @@
+@use '/styles/variables';
+
+@mixin primaryLinkWhite {
+    color: #fff;
+          text-decoration: none;
+          font-size: variables.$font-size-sm;
+
+    &:hover {
+        text-decoration: underline !important;
+        text-decoration-thickness: max(3px, 0.1875rem, 0.12em) !important;
+        text-underline-offset: 0.1em !important;
+    }
+}

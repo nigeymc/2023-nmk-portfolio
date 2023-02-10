@@ -1,0 +1,32 @@
+{
+  "name": "one-greenwich",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --check --ignore-path .gitignore .",
+    "prettier": "prettier --write --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "@next/font": "^13.1.1",
+    "emailjs-com": "^3.2.0",
+    "eslint": "8.27.0",
+    "eslint-config-next": "^13.1.1",
+    "next": "^13.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-google-recaptcha": "^2.1.0",
+    "react-grid": "^4.0.4",
+    "react-hook-form": "^7.43.1",
+    "react-stickky": "^3.9.0",
+    "require-path": "^0.3.0"
+  },
+  "devDependencies": {
+    "postcss-loader": "^7.0.2",
+    "prettier": "^2.7.1",
+    "sass": "^1.57.1"
+  }
+}
