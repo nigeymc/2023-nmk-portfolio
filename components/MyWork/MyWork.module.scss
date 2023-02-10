@@ -9,22 +9,7 @@
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
-    
-            &:after {
-                width: 100%;
-                height: 20px;
-                content: "";
-                position: absolute;
-                left: 0;
-                display: block;
-                background-color: variables.$primary-white;
-                background-image: -o-linear-gradient(45deg, transparent 49%, variables.$primaryBlue 50%, transparent 51%);
-                background-image: linear-gradient(45deg, transparent 49%, variables.$primaryBlue 50%, transparent 51%);
-                background-size: 5px 5px;
-                right: -1rem;
-                top: -1rem;
-                z-index: 1;
-            }
+            margin: 0 25px;
             
     .cardsContainer {
         display: grid;
@@ -36,9 +21,6 @@
             grid-template-columns: repeat(1, 1fr);
         }
         margin: 0 auto 15px;
-        @media screen and (max-width: 576px) {
-            margin: 0 25px;
-        }
         padding: 25px 0;
     }
     

@@ -7,7 +7,7 @@ export const FileDownload = ({ fileDetails }) => {
   const iconColour = colour === 'black' ? `${style.black}` : `${style.white}`
   return (
     <span className={style.outer}>
-      <Link href={url} download>
+      <Link href={url} download target="_blank">
         <span className={`${style.downloadFileIcon} ${iconColour}`} />
         <span className={style.fileDetails}>
           <span className={style.title}>{title}</span>
@@ -21,23 +21,4 @@ export const FileDownload = ({ fileDetails }) => {
       </Link>
     </span>
   )
-}
-
-FileDownload.propTypes = {
-  /**
-   * The title of the file, not including the file extension
-   **/
-  title: PropTypes.string,
-  /**
-   * The type of file
-   **/
-  type: PropTypes.string,
-  /**
-   * A URL to download the file
-   **/
-  url: PropTypes.string,
-  /**
-   * The size of the file in KB or MB
-   **/
-  size: PropTypes.string,
 }
