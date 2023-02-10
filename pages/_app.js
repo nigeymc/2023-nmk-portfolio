@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { Lato } from '@next/font/google'
 import '../styles/globals.scss'
-import Layout from '../components/Layout/layout'
+import Layout from '../components/Layout/Layout'
 import siteData from './site-data/site-data.json'
 
 const lato = Lato({
