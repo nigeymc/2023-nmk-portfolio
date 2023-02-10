@@ -23,8 +23,8 @@ const Card = ({ postData }) => {
           <Image
             className={style.image}
             src={thumbnail}
-            alt="Picture of the author"
-            width={1000}
+            alt="Featured post thumbanail"
+            width={600}
             height={230}
             unoptimized
             priority
