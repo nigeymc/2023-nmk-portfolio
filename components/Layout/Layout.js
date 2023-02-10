@@ -5,7 +5,7 @@ import ContactFooter from '../Footer/ContactFooter'
 import Sticky from 'react-stickky'
 import style from '../Layout/Layout.module.scss'
 
-const Layout = ({ children }) => {
+export default function Layout({ children }) {
   return (
     <BodyInner>
       <Sticky className={style.stickyStyle}>
@@ -17,5 +17,3 @@ const Layout = ({ children }) => {
     </BodyInner>
   )
 }
-
-export { Layout as default }
