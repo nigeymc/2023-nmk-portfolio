@@ -14,7 +14,7 @@ const ContactFooter = () => {
         <Container>
           <Row>
             <Col lg={4} md={6} sm={12}>
-              <h2 className={stolzl.className}>My Socials</h2>
+              <h2 className={stolzl.className}>Follow Me</h2>
               <p>You can find me on the following social channels</p>
               <SocialChannels />
             </Col>
