@@ -17,13 +17,18 @@ const Card = ({ postData }) => {
   } = postData
 
   return (
-    <Link target="_blank" href={guid} className={style.card}>
+    <Link
+      target="_blank"
+      href={guid}
+      className={style.card}
+      title={`Read my blog post about ${title} on Medium.com`}
+    >
       <div className={style.image}>
         {thumbnail && (
           <Image
             className={style.image}
             src={thumbnail}
-            alt="Featured post thumbanail"
+            alt={`Featured thumbnail image for blog post on ${url}`}
             width={600}
             height={230}
             unoptimized

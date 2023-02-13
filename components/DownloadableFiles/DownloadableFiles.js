@@ -7,7 +7,7 @@ export const FileDownload = ({ fileDetails }) => {
   const iconColour = colour === 'black' ? `${style.black}` : `${style.white}`
   return (
     <span className={style.outer}>
-      <Link href={url} download target="_blank">
+      <Link href={url} download={url} target="_blank">
         <span className={`${style.downloadFileIcon} ${iconColour}`} />
         <span className={style.fileDetails}>
           <span className={style.title}>{title}</span>
