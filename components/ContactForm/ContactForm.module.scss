@@ -1,17 +1,22 @@
 @use '/styles/variables';
 
-.content {
-    padding: 25px 15px;
-    color: variables.$primaryBlue;
-    font-size: variables.$font-size-md;
-}
-
 .contactForm {
     padding: 3rem;
     margin: 3rem 0;
     border: 1rem solid variables.$primaryBlue;
     -o-border-image: -o-repeating-linear-gradient(45deg, transparent, transparent 5px, variables.$primaryBlue 6px, variables.$primaryBlue 15px, transparent 16px, transparent 20px) 20/1rem;
     border-image: repeating-linear-gradient(45deg, transparent, transparent 5px, variables.$primaryBlue 6px, variables.$primaryBlue 15px, transparent 16px, transparent 20px) 20/1rem;
+
+    .content {
+        padding: 0 15px 25px;
+        margin: 0;
+        color: variables.$primaryBlue;
+        font-size: variables.$font-size-md;
+
+        div {
+            padding: 0;
+        }
+    }
     
     .formGroup {
         margin-bottom: 1rem;

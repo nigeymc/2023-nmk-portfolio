@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-grid'
 import ReCAPTCHA from 'react-google-recaptcha'
 import * as emailjs from 'emailjs-com'
 import style from './ContactForm.module.scss'
+import HeadingsParagraphs from '../HeadingsParagraphs/HeadingsParagraph'
 
 const initialState = {
   name: '',
@@ -26,7 +27,7 @@ const formReducer = (state, action) => {
   }
 }
 
-const ContactForm = () => {
+const ContactForm = ({ content }) => {
   const [labelState, setLabelState] = useState(false)
   const [formState, dispatch] = useReducer(formReducer, initialState)
   const [showFormErr, setShowFormErr] = useState(false)
@@ -79,7 +80,7 @@ const ContactForm = () => {
           } else {
             setFormSubmitted({
               title:
-                "There was a problem sending your email', paragraph: 'Please try again later or email me directly at mckenna.niall@gmail.com or reach out on LinkedIn",
+                'Please try again later or email me directly at mckenna.niall@gmail.com or you can contact me via LinkedIn',
             })
           }
         },
@@ -89,7 +90,7 @@ const ContactForm = () => {
           setFormSubmitted({
             title: 'Error sending message',
             paragraph:
-              'Please try again later or email me directly at mckenna.niall@gmail.com or reach out on LinkedIn',
+              'Please try again later or email me directly at mckenna.niall@gmail.com or you can contact me via LinkedIn',
           })
         },
       )
@@ -105,10 +106,7 @@ const ContactForm = () => {
         >
           <Row>
             <div className={style.content}>
-              <p>
-                Need to get in touch? Please feel free to drop me line below and
-                I&aposll respond as soon as possible.
-              </p>
+              <HeadingsParagraphs content={content} />
             </div>
           </Row>
           <Row>

@@ -51,6 +51,13 @@
     "heading": "My Medium Blog Posts",
     "headingText": ["My most recent blog posts published on Medium"]
   },
+  "contactFormHeading": {
+    "heading": "Contact Me",
+    "headingText": [
+      "Wish to get in touch? Just drop me line below and I'll respond as soon as possible.",
+      "You can also email me directly at mckenna.niall[at]gmail.com"
+    ]
+  },
   "seo": {
     "title": "Niall McKenna | FRONT END · ENGINEER · DESIGNER · LONDON",
     "description": "A London based Front End Engineer and Designer and this is my personal portfolio website. I code and design websites and web apps in HTML, CSS, SCSS, Javascript, ES6+, React, Next and much more. I am available for freelance projects and I write occasionaly on Medium about my work and interests.",

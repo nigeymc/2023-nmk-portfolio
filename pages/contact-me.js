@@ -3,7 +3,7 @@ import HeroBlock from '../components/HeroBlock/HeroBlock'
 import siteData from './site-data/site-data.json'
 
 export default function ContactMe() {
-  const { heroContent } = siteData
+  const { heroContent, contactFormHeading } = siteData
 
   return (
     <>
@@ -12,7 +12,7 @@ export default function ContactMe() {
         subTitle={heroContent.subTitle}
         context={heroContent.context}
       />
-      <ContactForm />
+      <ContactForm content={contactFormHeading} />
     </>
   )
 }
