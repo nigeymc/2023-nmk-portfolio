@@ -15,7 +15,7 @@ const Card = ({ postData }) => {
     thumbnail,
     title,
   } = postData
-  console.log(description)
+
   return (
     <Link
       target="_blank"

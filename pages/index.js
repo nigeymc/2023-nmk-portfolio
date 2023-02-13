@@ -2,6 +2,7 @@ import IntroBlock from '../components/IntroBlock/IntroBlock'
 import MyWork from '../components/MyWork/MyWork'
 import HeroBlock from '../components/HeroBlock/HeroBlock'
 import MediumPosts from '../components/MediumPosts/MediumPosts'
+
 import siteData from './site-data/site-data.json'
 
 function Home({ posts }) {

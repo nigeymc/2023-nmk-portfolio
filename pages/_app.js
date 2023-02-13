@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Script from 'next/script'
 import { Lato } from '@next/font/google'
+import { ParallaxProvider } from 'react-scroll-parallax'
 import '../styles/globals.scss'
 import Layout from '../components/Layout/Layout'
 import siteData from './site-data/site-data.json'
@@ -66,7 +67,9 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <section className={lato.className}>
         <Layout>
-          <Component {...pageProps} />
+          <ParallaxProvider>
+            <Component {...pageProps} />
+          </ParallaxProvider>
         </Layout>
       </section>
     </>
