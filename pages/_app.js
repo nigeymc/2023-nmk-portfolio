@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Script from 'next/script'
 import { Lato } from '@next/font/google'
 import '../styles/globals.scss'
 import Layout from '../components/Layout/Layout'
@@ -15,7 +16,22 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      {/* Global Site Tag (gtag.js) - Google Analytics */}
+      <Script
+        strategy="afterInteractive"
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-LSC02Z7B9N"
+        id="g-tag"
+      />
       <Head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+          window.dataLayer = window.dataLayer || []; function gtag()
+          {dataLayer.push(arguments)}
+          gtag("js", new Date()); gtag("config", "G-LSC02Z7B9N");`,
+          }}
+        />
         <meta charSet="UTF-8" />
         <title>{seo.title}</title>
         <meta name="description" content={seo.description} />
