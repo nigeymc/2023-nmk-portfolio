@@ -42,7 +42,7 @@
         .message {
             position: relative;
             left: 13px;
-            top: -5px;
+            top: 35px;
         }
     
         .formControl {
@@ -67,6 +67,7 @@
             &:focus {
                 outline: 5px solid variables.$greenAccent !important;
             }
+
         }
 
         .formControl[name="name"], .formControl[name="email"] {
@@ -79,6 +80,8 @@
 
         textarea.formControl {
             height: auto;
+            padding-left: 13px !important;
+            padding-top: 45px !important;
         }
 
         .button {
