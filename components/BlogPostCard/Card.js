@@ -28,7 +28,7 @@ const Card = ({ postData }) => {
           <Image
             className={style.image}
             src={thumbnail}
-            alt={`Featured thumbnail image for blog post on ${title}`}
+            alt={`${title} blog post thumbnail`}
             width={600}
             height={230}
             unoptimized
