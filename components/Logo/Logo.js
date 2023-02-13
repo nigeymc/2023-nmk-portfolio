@@ -14,6 +14,9 @@ const Logo = ({ context }) => {
       <Link className={`${stolzlBold.className} ${useContext}`} href="/">
         NMK
       </Link>
+      <p id="logo" className="visuallyHidden">
+        Brand logo in plain text
+      </p>
     </span>
   )
 }

@@ -25,7 +25,7 @@ const Card = ({ content }) => {
       <div className={style.image}>
         <Image
           src={image}
-          alt={`Image of ${heading}`}
+          alt={`Thumbnail image of ${heading}`}
           width={800}
           height={450}
           priority
