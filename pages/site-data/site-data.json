@@ -28,6 +28,7 @@
     ],
     "cards": [
       {
+        "image": "/img/cards/jmk.jpg",
         "heading": "JMK Security Website",
         "text": "I designed and built this website for JMK Security in 2021. The website is using decoupled Wordpress as a Content Management System and the Frontity framework for delivering a React front end for decoupled Wordpress.",
         "techStack": "Tech Stack: Wordpress CMS, Frontity, ReactStrap, ReactJS, Styled Components",
@@ -37,6 +38,7 @@
         "websiteLink": "https://jmksecurity.net/"
       },
       {
+        "image": "/img/cards/booking-calendar.jpg",
         "heading": "Reservation Calendar UI",
         "text": "I designed and built this UI for a reservation system for Royal Borough of Greenwich council. The UI is an ES6 app that fetches data from a PHP and SQL backend and allows the user to reserve two 1 hour appointments twice per day.",
         "techStack": "Tech Stack: ES6, Webpack, Babel, Unfetch",

@@ -1,9 +1,11 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import style from './Card.module.scss'
 import { Col } from 'react-grid'
 
 const Card = ({ content }) => {
   const {
+    image,
     heading,
     text,
     techStack,
@@ -20,7 +22,15 @@ const Card = ({ content }) => {
 
   return (
     <section className={`${style.card} ${useContext}`}>
-      <div className={style.image}></div>
+      <div className={style.image}>
+        <Image
+          src={image}
+          alt={`Image of ${heading}`}
+          width={800}
+          height={450}
+          priority
+        ></Image>
+      </div>
       <div className={style.content}>
         <h3>{heading}</h3>
         <p>{text}</p>

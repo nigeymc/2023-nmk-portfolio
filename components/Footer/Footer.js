@@ -9,7 +9,7 @@ const Footer = () => {
       <Container>
         <Row>
           <Col lg={3} md={3} sm={12}>
-            <div className={style.footerLogo}>
+            <div aria-hidden className={style.footerLogo}>
               <Logo context={'footer'} />
             </div>
           </Col>

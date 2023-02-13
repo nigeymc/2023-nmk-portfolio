@@ -15,7 +15,7 @@ const Card = ({ postData }) => {
     thumbnail,
     title,
   } = postData
-
+  console.log(description)
   return (
     <Link
       target="_blank"
@@ -28,7 +28,7 @@ const Card = ({ postData }) => {
           <Image
             className={style.image}
             src={thumbnail}
-            alt={`${title} blog post thumbnail`}
+            alt={`Blog post thumbnail for ${title}`}
             width={600}
             height={230}
             unoptimized

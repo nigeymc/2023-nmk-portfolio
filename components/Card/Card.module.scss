@@ -13,6 +13,7 @@
     -webkit-box-direction: normal;
     -ms-flex-flow: column;
     flex-flow: column;
+    background-color: variables.$primaryBlue;
 
     @media screen and (max-width: 992px) {
         font-size: 1.1rem;
@@ -21,10 +22,37 @@
     .image {
         width: 100%;
         min-height: 450px;
+        @media screen and (max-width: 1200px) {
+            min-height: 400px;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            min-height: 550px;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            min-height: 400px;
+
+            img {
+                height: 100%;
+            }
+        }
+
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
         position: relative;
+        -o-object-fit: cover;
+        object-fit: cover;
+        padding: 20px;
         background-color: variables.$primary-white;
 
         &:after {
@@ -129,21 +157,6 @@
             }
         }
 
-    }
-}
-
-.jmk {
-    background-color: variables.$primaryBlue;
-
-    .image {
-        background-image: url('/img/cards/jmk.jpg');
-    }
-}
-.calendar {
-    background-color: variables.$primaryBlue;
-
-    .image {
-        background-image: url('/img/cards/booking-calendar.jpg');
     }
 }
 
