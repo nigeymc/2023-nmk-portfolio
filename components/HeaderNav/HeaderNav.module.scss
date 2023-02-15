@@ -145,7 +145,7 @@
           letter-spacing: 1px;
 
           &:focus {
-            outline: 5px solid #00847C !important;
+            outline: 5px solid variables.$focus !important;
             padding: 20px 0;
             border-radius: 10px;
           }

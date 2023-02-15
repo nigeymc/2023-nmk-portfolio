@@ -21,7 +21,10 @@
 
     .image {
         width: 100%;
-        min-height: 450px;
+        min-height: 500px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
         img {
             height: calc(100% - 10px);
         }
@@ -35,20 +38,15 @@
 
         @media screen and (max-width: 992px) {
             min-height: 550px;
-
-            img {
-                height: 100%;
-            }
         }
 
         @media screen and (max-width: 768px) {
             min-height: 400px;
-
-            img {
-                height: 100%;
-            }
         }
-
+        @media screen and (max-width: 420px) {
+            min-height: 320px;
+        }
+        
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -74,12 +72,6 @@
             z-index: 1;
 	
         }
-    }
-    
-    .image {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
     }
 
     .content {
@@ -120,7 +112,7 @@
             margin: 10px 0;
             
             a {
-                width: 50%;
+                width: 49%;
                 color: variables.$primaryBlue;
                 display: -webkit-box;
                 display: -ms-flexbox;
@@ -133,6 +125,10 @@
                     -ms-flex-align: center;
                         align-items: center;
                 color: variables.$primaryBlue;
+                padding: 5px;
+                margin: 5px 5px 5px 0;
+                font-size: 1.1rem;
+
     
                     &:hover {
                         text-decoration: underline !important;
@@ -141,11 +137,14 @@
                     }
 
                     &:focus {
-                        outline: 5px solid #00847C !important;
+                        outline: 5px solid variables.$focus !important;
+                        padding: 5px;
+                        margin: 5px 5px 5px 0;
                     }
-    
+                    
+                
                 .linkText {
-                    width: 70%;
+                    width: auto;
                 }     
     
                 .chevron {

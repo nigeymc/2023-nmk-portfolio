@@ -1,12 +1,11 @@
 import Image from 'next/image'
-import style from './ProfilePic.module.scss'
 import { useParallax, useParallaxController } from 'react-scroll-parallax'
 
 const ProfilePic = ({ imageSrc }) => {
   const { ref } = useParallax({ speed: -12 })
   const parallaxController = useParallaxController()
   return (
-    <figure className={style.profilepic} ref={ref}>
+    <figure ref={ref}>
       <Image
         alt="Profile picture of Niall McKenna"
         src={imageSrc}

@@ -27,6 +27,9 @@
         background-color: variables.$primary-white;
         -o-object-fit: cover;
         object-fit: cover;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
        
         &:after {
             width: 100%;
@@ -43,12 +46,6 @@
             bottom: -1rem;
             z-index: 1;
         }
-    }
-    
-    .image {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
     }
 
     .content {
