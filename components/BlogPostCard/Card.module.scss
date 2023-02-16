@@ -5,7 +5,7 @@
     height: auto;
     margin-bottom: 25px;
     display: grid;
-    grid-auto-rows: minmax(320px, 200px);
+    grid-auto-rows: minmax(316px, 320px);
     border: solid 1px variables.$primaryBlue;
     background-color: variables.$primaryBlue;
     text-decoration: none;
@@ -54,10 +54,18 @@
         height: 100%;
         padding: 25px;
         margin-bottom: 10px;
-        display: grid;
-        grid-auto-flow: row;
-        grid-auto-rows: 1fr;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column;
+                flex-flow: column;
         color: variables.$primaryBlue;
+
+        * {
+            height: 100%;
+        }
 
         h3 {
             margin-bottom: 10px;
@@ -65,21 +73,32 @@
 
         p {
             margin-bottom: 0px;
+
+            span {
+                display: inline;
+            }
         }
 
-        .author, time {
+        .author {
             font-size: 0.9rem;
-        }
 
-        time {
-            padding: 0px 0 10px;
+            @media screen and (max-width: 768px) {
+                height: 40px;
+            }
         }
 
         .description {
             font-style: italic;
-
+            height: 540px;
+            @media screen and (max-width: 1200px) {
+                height: 380px;
+            }
             @media screen and (max-width: 992px) {
-                font-size: 1.1rem;
+                margin-top: 10px;
+                height: 540px;
+            }
+            @media screen and (max-width: 768px) {
+                height: 400px;
             }
         }
 
@@ -99,16 +118,9 @@
                     display: -webkit-box;
                     display: -ms-flexbox;
                     display: flex;
-                    -webkit-box-orient: vertical;
-                    -webkit-box-direction: normal;
-                        -ms-flex-flow: row;
-                            flex-flow: row;
-                    -webkit-box-align: center;
-                        -ms-flex-align: center;
-                            align-items: center;
-                    color: variables.$primaryBlue;
+                    color: #334050;
                     text-decoration: underline;
-                    font-size: 1.1rem;
+                    font-size: 1.065rem;
                 }     
     
                 .chevron {

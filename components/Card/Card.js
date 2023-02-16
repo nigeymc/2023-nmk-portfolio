@@ -15,13 +15,8 @@ const Card = ({ content }) => {
     websiteLink,
   } = content
 
-  let useContext =
-    (heading.includes('JMK') && `${style.jmk}`) ||
-    (heading.includes('Reservation') && `${style.calendar}`) ||
-    null
-
   return (
-    <section className={`${style.card} ${useContext}`}>
+    <section className={style.card}>
       <div className={style.image}>
         <Image
           src={image}

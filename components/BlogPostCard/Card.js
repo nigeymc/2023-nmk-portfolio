@@ -38,8 +38,10 @@ const Card = ({ postData }) => {
       </div>
       <div className={style.content}>
         <h3>{title}</h3>
-        <p className={style.author}>Written by {author}</p>
-        <time dateTime={pubDate}>Published on {pubDate.slice(0, 10)}</time>
+        <p className={style.author}>
+          Written by {author}
+          <time dateTime={pubDate}> on {pubDate.slice(0, 10)}</time>
+        </p>
 
         <div
           className={style.description}
