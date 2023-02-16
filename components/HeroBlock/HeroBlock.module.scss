@@ -24,7 +24,7 @@
 
     .wrapper {
         padding: 0;
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 767px) {
         padding-top: 25px;
         } 
         @media screen and (max-width: 320px) {
@@ -45,6 +45,7 @@
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
+        position: relative;
     }
 
     h1, p {
@@ -59,8 +60,8 @@
         @media screen and (max-width: 991px) {
             font-size: 4.25rem;
         }
-        @media screen and (max-width: 768px) {
-            font-size: 4.6rem;
+        @media screen and (max-width: 767px) {
+            font-size: 4.3rem;
             letter-spacing: -2px;
         }
         line-height: 0.82;
@@ -69,6 +70,7 @@
         text-transform: uppercase;
         letter-spacing: -4px;
         color: variables.$greenAccent;
+        background-color: variables.$primary-white;
     }
 
     p {
@@ -76,6 +78,23 @@
         font-size: 1rem;
         color: variables.$primaryBlue;
         letter-spacing: 1px;
+        position: absolute;
+        bottom: 120px;
+        @media screen and (max-width: 768px) {
+            bottom: 20px;
+        }
+        opacity: 0;
+        z-index: -1;
+        -webkit-animation-name: example;
+                animation-name: example;
+        -webkit-animation-duration: 0.6s;
+                animation-duration: 0.6s;
+        -webkit-animation-delay: 2s;
+                animation-delay: 2s;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+        -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
         @media screen and (max-width: 991px) {
             font-size: 0.77rem;
         }
@@ -83,9 +102,33 @@
             font-size: 0.96rem;
         }
         @media screen and (max-width: 420px) {
-            font-size: 0.96rem;
+            font-size: 0.93rem;
+            letter-spacing: 0px;
         }
     }
+
+    @-webkit-keyframes example {
+        from {position: absolute; bottom: 120px; opacity: 0;}
+        to {position: absolute; bottom: 100px; opacity: 1;}
+      }
+
+    @keyframes example {
+        from {position: absolute; bottom: 120px; opacity: 0;}
+        to {position: absolute; bottom: 100px; opacity: 1;}
+      }
+
+      @media screen and (max-width: 768px) {
+        @-webkit-keyframes example {
+            from {position: absolute; bottom: 20px; opacity: 0;}
+            to {position: absolute; bottom: -20px; opacity: 1;}
+          }
+    
+        @keyframes example {
+            from {position: absolute; bottom: 20px; opacity: 0;}
+            to {position: absolute; bottom: -20px; opacity: 1;}
+          }
+
+      }
 
     .headingImage {
         
