@@ -1,11 +1,8 @@
 @use '../../styles/variables';
 
 .card {
-    width: 100%;
     height: auto;
     margin-bottom: 25px;
-    display: grid;
-    grid-auto-rows: minmax(316px, 320px);
     border: solid 1px variables.$primaryBlue;
     background-color: variables.$primaryBlue;
     text-decoration: none;
@@ -21,15 +18,25 @@
 
     .image {
         width: 100%;
-        min-height: 230px;
         height: auto;
+        height: 250px;
         position: relative;
         background-color: variables.$primary-white;
-        -o-object-fit: cover;
-        object-fit: cover;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+
+        > div {
+            position: unset !important;
+        }
+
+        img {
+            -o-object-fit: cover;
+               object-fit: cover;
+            width: 100% !important;
+            position: relative !important;
+            height: unset !important;
+        }
        
         &:after {
             width: 100%;
@@ -51,7 +58,16 @@
     .content {
         background-color: variables.$pinkAccent;
         width: 100%;
-        height: 100%;
+        height: 330px;
+        @media screen and (max-width: 1200px) {
+            height: 380px;
+        }
+        @media screen and (max-width: 992px) {
+            height: 350px;
+        }
+        @media screen and (max-width: 768px) {
+            height: 320px;
+        }
         padding: 25px;
         margin-bottom: 10px;
         display: -webkit-box;

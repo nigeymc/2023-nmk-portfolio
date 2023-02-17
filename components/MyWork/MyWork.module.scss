@@ -13,16 +13,18 @@
             padding: 25px 0 0;
             
     .cardsContainer {
-        display: grid;
-        grid-auto-rows: minmax(850px, 885px);
-        grid-column-gap: 15px;
-        grid-row-gap: 15px;
-        grid-template-columns: repeat(2, 1fr);
         margin: 0 auto 15px;
         padding: 25px 0;
-        @media screen and (max-width: 992px) {
-            grid-template-columns: repeat(1, 1fr);
-        }
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+
+                @media screen and (max-width: 992px) {
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                        -ms-flex-flow: column;
+                            flex-flow: column;
+                }
     }
     
 }

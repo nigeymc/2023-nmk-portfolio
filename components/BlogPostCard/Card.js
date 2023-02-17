@@ -29,10 +29,9 @@ const Card = ({ postData }) => {
             className={style.image}
             src={thumbnail}
             alt={`Blog post thumbnail for ${title}`}
-            width={600}
-            height={230}
             unoptimized
             priority
+            layout="fill"
           />
         )}
       </div>

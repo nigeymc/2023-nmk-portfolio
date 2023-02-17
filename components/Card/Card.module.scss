@@ -6,16 +6,49 @@
     margin-bottom: 25px;
     border: solid 1px variables.$primaryBlue;
     background-color: variables.$primaryBlue;
-    grid-template-columns: repeat(1, 1fr);
-    display: grid;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+
+    &:nth-child(1) {
+        margin-right: 12px;
+    }
+    &:nth-child(2) {
+        margin-left: 12px;
+    }
+
+    @media screen and (max-width: 992px) {
+        width: 100%;
+
+        &:nth-child(1) {
+            margin-right: 0;
+        }
+        &:nth-child(2) {
+            margin-left: 0;
+        }
+    }
 
     .image {
         width: 100%;
         position: relative;
-        -o-object-fit: cover;
-        object-fit: cover;
-        padding: 10px;
+        padding: 10px 10px 25px;
         background-color: variables.$primary-white;
+   
+        > div {
+            position: unset !important;
+        }
+
+        img {
+            -o-object-fit: contain;
+               object-fit: contain;
+            width: 100% !important;
+            position: relative !important;
+            height: unset !important;
+        }
 
         &:after {
             width: 100%;
@@ -86,7 +119,7 @@
                     -ms-flex-align: center;
                         align-items: center;
                 color: variables.$primaryBlue;
-                padding: 5px;
+                padding: 5px 5px 5px 0;
                 margin: 5px 5px 5px 0;
                 font-size: 1.065rem;
 
@@ -99,7 +132,7 @@
 
                     &:focus {
                         outline: 5px solid variables.$focus !important;
-                        padding: 5px;
+                        padding: 5px 5px 5px 0;
                         margin: 5px 5px 5px 0;
                     }
                     
