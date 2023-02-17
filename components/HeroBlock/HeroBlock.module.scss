@@ -58,10 +58,11 @@
     h1 {
         font-size: 5.2rem;
         @media screen and (max-width: 991px) {
-            font-size: 4.1rem;
+            font-size: 4.2rem;
         }
         @media screen and (max-width: 767px) {
             letter-spacing: -2px;
+            font-size: 4.15rem;
         }
         line-height: 0.82;
         font-style: normal;
