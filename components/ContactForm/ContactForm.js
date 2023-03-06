@@ -177,10 +177,7 @@ const ContactForm = ({ content }) => {
         <Container>
           <Row>
             <div className={style.content}>
-              <ReCAPTCHA
-                sitekey="6Lfng2caAAAAAPH3mUIJVnJRqA7maIMWOdsTz0t2"
-                onChange={sendEmail}
-              />
+              <ReCAPTCHA sitekey={SITE_KEY} onChange={sendEmail} />
             </div>
           </Row>
         </Container>

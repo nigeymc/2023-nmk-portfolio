@@ -47,6 +47,11 @@ const HeaderNav = () => {
                 </li>
 
                 <li>
+                  <NavLink href="/post">
+                    <span>Blog</span>
+                  </NavLink>
+                </li>
+                <li>
                   <NavLink href="/contact-me">
                     <span>Contact</span>
                   </NavLink>

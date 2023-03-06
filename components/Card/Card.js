@@ -23,8 +23,8 @@ const Card = ({ content }) => {
         <Image
           src={image}
           alt={`Thumbnail image of ${heading}`}
-          priority
           layout="fill"
+          loading="lazy"
         ></Image>
       </div>
       <div className={style.content}>
@@ -39,7 +39,7 @@ const Card = ({ content }) => {
             <span className={style.linkText}>{githubLabel}</span>
             <span className={style.chevron}></span>
           </Link>
-          <Link href={websiteLink}>
+          <Link target="_blank" href={websiteLink.trim()}>
             <span className={style.linkText}>{heading}</span>
             <span className={style.chevron}></span>
           </Link>

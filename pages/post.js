@@ -1,18 +1,9 @@
-import IntroBlock from '../components/IntroBlock/IntroBlock'
-import MyWork from '../components/MyWork/MyWork'
 import HeroBlock from '../components/HeroBlock/HeroBlock'
 import MediumPosts from '../components/MediumPosts/MediumPosts'
-
 import siteData from './site-data/site-data.json'
 
 const Home = ({ loading, error, articleDataArr }) => {
-  const {
-    heroContent,
-    fileDetails,
-    introContent,
-    myWorkContent,
-    mediumPostsHeading,
-  } = siteData
+  const { heroContent, postsHeading } = siteData
 
   return (
     <>
@@ -21,10 +12,8 @@ const Home = ({ loading, error, articleDataArr }) => {
         subTitle={heroContent.subTitle}
         context={heroContent.context}
       />
-      <IntroBlock fileDetails={fileDetails} content={introContent} />
-      <MyWork content={myWorkContent} />
       <MediumPosts
-        mediumPostsHeading={mediumPostsHeading}
+        mediumPostsHeading={postsHeading}
         cardsContent={articleDataArr}
         loading={loading}
         error={error}
@@ -43,7 +32,7 @@ export async function getStaticProps() {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '2d1585b13bmsh909e6d50fde1de4p11fc5bjsn7f618cea23b8',
+      'X-RapidAPI-Key': process.env.customKey,
       'X-RapidAPI-Host': 'medium2.p.rapidapi.com',
     },
   }
@@ -92,7 +81,7 @@ export async function getStaticProps() {
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
     // - At most once every 10 seconds
-    revalidate: 595200, // In seconds
+    revalidate: 10, // In seconds
   }
 }
 
