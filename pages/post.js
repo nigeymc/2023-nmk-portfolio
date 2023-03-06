@@ -69,8 +69,6 @@ export async function getStaticProps() {
     )
     const articleContent = await content.json()
     articleContentArr.push(articleContent)
-
-    // console.log(articleDataArr)
   }
 
   return {
