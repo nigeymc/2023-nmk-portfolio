@@ -85,8 +85,8 @@
         }
         opacity: 0;
         z-index: -1;
-        -webkit-animation-name: text;
-                animation-name: text;
+        -webkit-animation-name: example;
+                animation-name: example;
         -webkit-animation-duration: 0.6s;
                 animation-duration: 0.6s;
         -webkit-animation-delay: 2s;
@@ -107,23 +107,23 @@
         }
     }
 
-    @-webkit-keyframes text {
+    @-webkit-keyframes example {
         from {position: absolute; bottom: 120px; opacity: 0;}
         to {position: absolute; bottom: 100px; opacity: 1;}
       }
 
-    @keyframes text {
+    @keyframes example {
         from {position: absolute; bottom: 120px; opacity: 0;}
         to {position: absolute; bottom: 100px; opacity: 1;}
       }
 
       @media screen and (max-width: 768px) {
-        @-webkit-keyframes text {
+        @-webkit-keyframes example {
             from {position: absolute; bottom: 20px; opacity: 0;}
             to {position: absolute; bottom: -20px; opacity: 1;}
           }
     
-        @keyframes text {
+        @keyframes example {
             from {position: absolute; bottom: 20px; opacity: 0;}
             to {position: absolute; bottom: -20px; opacity: 1;}
           }

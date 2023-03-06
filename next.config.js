@@ -1,7 +1,7 @@
 // next.config.js
 const path = require('path')
-require('dotenv').config()
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   // Your config here
   reactStrictMode: true,
@@ -37,9 +37,6 @@ const nextConfig = {
   },
   experimental: {
     appDir: true,
-  },
-  env: {
-    customKey: [process.env.API_KEY, process.env.SITE_KEY],
   },
 }
 

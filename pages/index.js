@@ -5,7 +5,7 @@ import MediumPosts from '../components/MediumPosts/MediumPosts'
 
 import siteData from './site-data/site-data.json'
 
-const Home = ({ loading, error, articleDataArr }) => {
+function Home({ posts }) {
   const {
     heroContent,
     fileDetails,
@@ -23,12 +23,7 @@ const Home = ({ loading, error, articleDataArr }) => {
       />
       <IntroBlock fileDetails={fileDetails} content={introContent} />
       <MyWork content={myWorkContent} />
-      <MediumPosts
-        mediumPostsHeading={mediumPostsHeading}
-        cardsContent={articleDataArr}
-        loading={loading}
-        error={error}
-      />
+      <MediumPosts posts={posts} heading={mediumPostsHeading} />
     </>
   )
 }
@@ -84,8 +79,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      articleDataArr,
-      articleContentArr,
+      posts,
     },
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
