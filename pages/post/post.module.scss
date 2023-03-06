@@ -1,0 +1,162 @@
+@use '../../styles/variables';
+
+@font-face {
+    font-family: Stolzl-Bold;
+    src: url('../Stolzl-Bold.woff2');
+}
+
+@font-face {
+    font-family: Stolzl-Medium;
+    src: url('../Stolzl-Medium.woff2');
+}
+
+@font-face {
+    font-family: Stolzl-Regular;
+    src: url('../Stolzl-Regular.woff2');
+}
+
+.postContainer {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 25px 0 55px 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+
+    h1 {
+        color: variables.$greenAccent;
+        font-family: 'Stolzl-Medium';
+        font-size: 2rem;
+    }
+
+    h2, h3 {
+        padding: 10px 0;
+    }
+
+    p {
+        font-size: 1.125rem;
+        line-height: 1.8;
+        margin: 15px 0;
+        &:first-of-type {
+            font-size: 1.50rem;
+            font-family: 'Stolzl-Regular';
+            color: variables.$primaryBlue;
+        }
+    }
+
+    a {
+        text-decoration: underline;
+        color: variables.$primaryBlue;
+
+        &:hover {
+            text-decoration: underline !important;
+            text-decoration-thickness: max(3px, 0.1875rem, 0.12em) !important;
+            text-underline-offset: 0.1em !important;
+        }
+    }
+
+    ul {
+        padding: 10px 25px;
+
+        p {
+            font-size: 1.125rem !important;
+            margin: 0;
+        }
+
+    }
+
+    img {
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        margin-bottom: 25px;
+        margin-top: 25px;
+        border: 1rem solid variables.$primaryBlue;
+        -o-border-image: -o-repeating-linear-gradient(45deg, transparent, transparent 5px, variables.$primaryBlue 6px, variables.$primaryBlue 15px, transparent 16px, transparent 20px) 20/1rem;
+        border-image: repeating-linear-gradient(45deg, transparent, transparent 5px, variables.$primaryBlue 6px, variables.$primaryBlue 15px, transparent 16px, transparent 20px) 20/1rem;
+    }
+
+    hr { 
+        padding: 25px 0;
+        border-style: none;
+        width: 80%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 0;
+        position: relative;
+        -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+
+        &:after {
+            width: 80%;
+            height: 20px;
+            content: "";
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            background-color: variables.$primary-white;
+            background-image: -o-linear-gradient(45deg, transparent 49%, variables.$primaryBlue 50%, transparent 51%);
+            background-image: linear-gradient(45deg, transparent 49%, variables.$primaryBlue 50%, transparent 51%);
+            background-size: 5px 5px;
+            z-index: 1;
+        }
+
+    }
+
+    pre {
+        color: variables.$primaryBlue;
+        position: relative;
+        padding: 25px;
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        overflow-x: auto;
+        background-color: variables.$pinkAccent;
+        border-radius:15px;
+        -webkit-border-radius:5px;
+        -moz-border-radius:5px;
+        -ms-border-radius:5px;
+        -o-border-radius:5px;
+
+        &::-webkit-scrollbar {
+            width: 16px;
+            height: 16px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: variables.$primaryBlue;
+            border-radius: 16px;
+            -webkit-box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.50),inset -2px -2px 2px rgba(54,61,80,.50);
+                    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.50),inset -2px -2px 2px rgba(54,61,80,.50);
+        }
+
+        &::-webkit-scrollbar-track {
+            background: linear-gradient(90deg,variables.$pinkAccent,variables.$pinkAccent 1px,variables.$pinkAccent 0,variables.$pinkAccent);
+        }
+
+    }
+
+    .outerLink {
+        width: 90%;
+        padding: 5%;
+        a {
+            color: variables.$greenAccent;
+            font-family: 'Stolzl-Regular';
+
+            strong {
+                font-family: 'Stolzl-Bold';
+            }
+        }
+    }
+
+}

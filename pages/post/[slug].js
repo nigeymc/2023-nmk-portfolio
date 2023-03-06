@@ -68,7 +68,7 @@ export async function getStaticProps({ params }) {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': process.env.customKey,
+      'X-RapidAPI-Key': process.env.API_KEY,
       'X-RapidAPI-Host': 'medium2.p.rapidapi.com',
     },
   }
@@ -158,7 +158,7 @@ export const getStaticPaths = async () => {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': process.env.customKey,
+      'X-RapidAPI-Key': '2d1585b13bmsh909e6d50fde1de4p11fc5bjsn7f618cea23b8',
       'X-RapidAPI-Host': 'medium2.p.rapidapi.com',
     },
   }

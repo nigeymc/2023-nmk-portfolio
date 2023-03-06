@@ -5,7 +5,7 @@ import MediumPosts from '../components/MediumPosts/MediumPosts'
 
 import siteData from './site-data/site-data.json'
 
-function Home({ posts }) {
+const Home = ({ loading, error, articleDataArr }) => {
   const {
     heroContent,
     fileDetails,
@@ -23,7 +23,12 @@ function Home({ posts }) {
       />
       <IntroBlock fileDetails={fileDetails} content={introContent} />
       <MyWork content={myWorkContent} />
-      <MediumPosts posts={posts} heading={mediumPostsHeading} />
+      <MediumPosts
+        mediumPostsHeading={mediumPostsHeading}
+        cardsContent={articleDataArr}
+        loading={loading}
+        error={error}
+      />
     </>
   )
 }
@@ -38,7 +43,7 @@ export async function getStaticProps() {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': process.env.customKey,
+      'X-RapidAPI-Key': '2d1585b13bmsh909e6d50fde1de4p11fc5bjsn7f618cea23b8',
       'X-RapidAPI-Host': 'medium2.p.rapidapi.com',
     },
   }
@@ -75,11 +80,14 @@ export async function getStaticProps() {
     )
     const articleContent = await content.json()
     articleContentArr.push(articleContent)
+
+    // console.log(articleDataArr)
   }
 
   return {
     props: {
-      posts,
+      articleDataArr,
+      articleContentArr,
     },
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
