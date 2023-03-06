@@ -1,18 +1,9 @@
-import IntroBlock from '../components/IntroBlock/IntroBlock'
-import MyWork from '../components/MyWork/MyWork'
 import HeroBlock from '../components/HeroBlock/HeroBlock'
 import MediumPosts from '../components/MediumPosts/MediumPosts'
-
 import siteData from './site-data/site-data.json'
 
-const Home = ({ loading, error, articleDataArr }) => {
-  const {
-    heroContent,
-    fileDetails,
-    introContent,
-    myWorkContent,
-    mediumPostsHeading,
-  } = siteData
+const Post = ({ loading, error, articleDataArr }) => {
+  const { heroContent, mediumPostsHeading } = siteData
 
   return (
     <>
@@ -21,8 +12,6 @@ const Home = ({ loading, error, articleDataArr }) => {
         subTitle={heroContent.subTitle}
         context={heroContent.context}
       />
-      <IntroBlock fileDetails={fileDetails} content={introContent} />
-      <MyWork content={myWorkContent} />
       <MediumPosts
         mediumPostsHeading={mediumPostsHeading}
         cardsContent={articleDataArr}
@@ -95,4 +84,4 @@ export async function getStaticProps() {
   }
 }
 
-export { Home as default }
+export { Post as default }
