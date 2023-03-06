@@ -36,7 +36,6 @@ const Home = ({ loading, error, articleDataArr }) => {
 export async function getStaticProps() {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library
-  const username = `mckenna.niall`
   const user_id = `dd8b42234ded`
   const url = `https://medium2.p.rapidapi.com/user/${user_id}/articles`
 
