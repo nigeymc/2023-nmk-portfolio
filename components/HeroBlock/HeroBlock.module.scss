@@ -85,8 +85,8 @@
         }
         opacity: 0;
         z-index: -1;
-        -webkit-animation-name: example;
-                animation-name: example;
+        -webkit-animation-name: text;
+                animation-name: text;
         -webkit-animation-duration: 0.6s;
                 animation-duration: 0.6s;
         -webkit-animation-fill-mode: forwards;
@@ -107,28 +107,23 @@
         }
     }
 
-    @-webkit-keyframes example {
+    @-webkit-keyframes text {
         from {position: absolute; bottom: 120px; opacity: 0;}
         to {position: absolute; bottom: 100px; opacity: 1;}
       }
 
-    @keyframes example {
+    @keyframes text {
         from {position: absolute; bottom: 120px; opacity: 0;}
         to {position: absolute; bottom: 100px; opacity: 1;}
       }
 
       @media screen and (max-width: 768px) {
-        @-webkit-keyframes example {
+        @-webkit-keyframes text {
             from {position: absolute; bottom: 20px; opacity: 0;}
             to {position: absolute; bottom: -20px; opacity: 1;}
           }
-<<<<<<< HEAD
 
         @keyframes text {
-=======
-    
-        @keyframes example {
->>>>>>> parent of a642796... medium api and blog set up
             from {position: absolute; bottom: 20px; opacity: 0;}
             to {position: absolute; bottom: -20px; opacity: 1;}
           }

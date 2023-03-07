@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@next/font": "^13.1.1",
+    "dotenv": "^16.0.3",
     "emailjs-com": "^3.2.0",
     "eslint": "8.27.0",
     "eslint-config-next": "^13.1.1",
@@ -21,7 +22,9 @@
     "react-google-recaptcha": "^2.1.0",
     "react-grid": "^4.0.4",
     "react-hook-form": "^7.43.1",
+    "react-markdown": "^8.0.5",
     "react-scroll-parallax": "^3.3.2",
+    "react-share": "^4.4.1",
     "react-stickky": "^3.9.0",
     "require-path": "^0.3.0"
   },

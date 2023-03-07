@@ -177,14 +177,7 @@ const ContactForm = ({ content }) => {
         <Container>
           <Row>
             <div className={style.content}>
-<<<<<<< HEAD
               <ReCAPTCHA sitekey={process.env.SITE_KEY} onChange={sendEmail} />
-=======
-              <ReCAPTCHA
-                sitekey="6Lfng2caAAAAAPH3mUIJVnJRqA7maIMWOdsTz0t2"
-                onChange={sendEmail}
-              />
->>>>>>> parent of a642796... medium api and blog set up
             </div>
           </Row>
         </Container>
