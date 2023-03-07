@@ -6,6 +6,7 @@
     border: 1rem solid variables.$primaryBlue;
     -o-border-image: -o-repeating-linear-gradient(45deg, transparent, transparent 5px, variables.$primaryBlue 6px, variables.$primaryBlue 15px, transparent 16px, transparent 20px) 20/1rem;
     border-image: repeating-linear-gradient(45deg, transparent, transparent 5px, variables.$primaryBlue 6px, variables.$primaryBlue 15px, transparent 16px, transparent 20px) 20/1rem;
+    min-height: 150px;
 
     .content {
         padding: 0 15px 25px;
