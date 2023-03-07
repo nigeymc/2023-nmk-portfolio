@@ -86,7 +86,9 @@ a {
   -webkit-text-decoration-skip: ink;
   text-decoration-skip-ink: auto;
   }
-
+  &:visited {
+    color: #334050;
+  }
   &:focus {
     outline: 5px solid #f7ba02 !important;
   }

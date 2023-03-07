@@ -14,11 +14,10 @@
   "introContent": {
     "heading": "Hi, I'm Niall",
     "headingText": [
-      "I'm a Front End Web Engineer. I also design for the web a little too. I've been working with the web since 2003 when I wrote my first line of HTML in the first semester of my BSc Interactive Multimedia Design degree at The University of Ulster, in Northern Ireland.",
-      "Upon graduating in 2008 I moved to Leeds in West Yorkshire, England and joined a small agency called Xperience, before joining the Engineering team at Jet2.com and Jet2holidays.com.",
-      "In January 2012, I headed for the bright lights of London, where I stayed primarily in the Ecommerce space until 2021. I've worked for Net A Porter, Stella & Dot and River Island. I'm currently working for Royal Borough of Greenwich council where I'm lead Front End Engineer in the Digital Product team.",
-      "My skills and interests are in writing modern semantic HTML, crafting tight CSS or SCSS, and harnessing the power of a Javascript tech stack, where I have experience working, with React frameworks including NextJS, Redux, Frontity etc.",
-      "In my spare time I can be found working on the occasional freelance project or learning yet another framework. Lately, I've been trying to write more and document my work, my projects and musings of interest... You can find them below."
+      "I'm an Irish born, London based Front End Web Engineer.",
+      "I've worked for some of the most well respected companies across the UK and Northern Ireland. From my early beginnings in Belfast with the Belfast Media Group. To my time in Leeds, England with Jet2.com, all the way to my current home - London, where I've worked for Net A Porter, River Island, and where I'm currently working for Royal Borough of Greenwich council.",
+      "My interests are in all things tech and design and my skills include writing modern semantic HTML, well crafted CSS or SCSS, and well tested Javascript, where I have experience working, with React and it's frameworks including NextJS, Redux, Frontity etc.",
+      "In my spare time I can be found working on both freelance and personal projects, learning yet another framework and lately, I've been writing and documenting my work, my projects and general discoveries around my favourite tech stack."
     ],
     "profilePic": "/img/profile-pic.jpg"
   },
