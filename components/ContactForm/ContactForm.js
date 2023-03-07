@@ -103,10 +103,9 @@ const ContactForm = ({ content }) => {
           id="contact-form"
           className={style.contactForm}
           onSubmit={submitFormAndShowCaptcha}
-          style={{ minHeight: '150px' }}
         >
           <Row>
-            <div className={style.content}>
+            <div className={style.content} style={{ minHeight: '150px' }}>
               <HeadingsParagraphs content={content} />
             </div>
           </Row>
