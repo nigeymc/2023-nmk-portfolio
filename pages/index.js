@@ -5,7 +5,7 @@ import MediumPosts from '../components/MediumPosts/MediumPosts'
 
 import siteData from './site-data/site-data.json'
 
-const Home = ({ loading, error, articleDataArr }) => {
+function Home({ posts }) {
   const {
     heroContent,
     fileDetails,
@@ -23,12 +23,7 @@ const Home = ({ loading, error, articleDataArr }) => {
       />
       <IntroBlock fileDetails={fileDetails} content={introContent} />
       <MyWork content={myWorkContent} />
-      <MediumPosts
-        mediumPostsHeading={mediumPostsHeading}
-        cardsContent={articleDataArr}
-        loading={loading}
-        error={error}
-      />
+      <MediumPosts posts={posts} heading={mediumPostsHeading} />
     </>
   )
 }
@@ -36,6 +31,7 @@ const Home = ({ loading, error, articleDataArr }) => {
 export async function getStaticProps() {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library
+<<<<<<< HEAD
   const user_id = `dd8b42234ded`
   const url = `https://medium2.p.rapidapi.com/user/${user_id}/articles`
 
@@ -82,11 +78,21 @@ export async function getStaticProps() {
 
     // console.log(articleDataArr)
   }
+=======
+  const res = await fetch(
+    'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@mckenna.niall',
+  ).catch((e) => {
+    console.error('Error fetching data', e)
+    return {
+      props: { error: true }, // will be passed to the page component as props
+    }
+  })
+  const posts = await res.json()
+>>>>>>> parent of a642796... medium api and blog set up
 
   return {
     props: {
-      articleDataArr,
-      articleContentArr,
+      posts,
     },
     // Next.js will attempt to re-generate the page:
     // - When a request comes in

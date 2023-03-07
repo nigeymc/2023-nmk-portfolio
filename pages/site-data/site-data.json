@@ -52,8 +52,8 @@
     ]
   },
   "mediumPostsHeading": {
-    "heading": "My Writing",
-    "headingText": ["My most recent blog posts"]
+    "heading": "My Medium Blog Posts",
+    "headingText": ["My most recent blog posts published on Medium"]
   },
   "contactFormHeading": {
     "heading": "Contact Me",
@@ -61,10 +61,6 @@
       "Wish to get in touch? Just drop me a line below and I'll respond as soon as possible.",
       "You can also email me directly at mckenna.niall[at]gmail.com"
     ]
-  },
-  "postsHeading": {
-    "heading": "My Writing",
-    "headingText": ["You can find all of my blog posts below"]
   },
   "seo": {
     "title": "Niall McKenna | FRONT END · ENGINEER · DESIGNER · LONDON",
