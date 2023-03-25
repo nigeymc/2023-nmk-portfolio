@@ -22,9 +22,9 @@ const Post = ({ slug, loading, error, title, url, markdown }) => {
     setMediumTitle(title)
   }, [loading, error, markdown, title, url])
 
-  const router = useRouter()
+  const { isFallback } = useRouter()
 
-  if (isLoaded && router.isFallback) {
+  if (isLoaded && isFallback) {
     return <LoadingSpinner />
   }
 
@@ -147,7 +147,7 @@ export async function getStaticProps({ params }) {
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
     // - At most once every 10 seconds
-    revalidate: 10, // In seconds
+    revalidate: 86400, // In seconds
   }
 }
 
