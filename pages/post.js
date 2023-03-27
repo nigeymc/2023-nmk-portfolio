@@ -51,7 +51,6 @@ export async function getStaticProps() {
 
   const data = await res.json()
   const article_ids = data.associated_articles
-
   const articleDataArr = []
   const articleContentArr = []
   for (const article_id of article_ids) {

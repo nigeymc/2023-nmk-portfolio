@@ -41,6 +41,9 @@ const Post = ({ slug, loading, error, title, url, markdown }) => {
           </Col>
           <Col xs={12} md={10} lg={10}>
             <div className={style.postContainer}>
+              <Link href={`/post`} className={style.backToAllPosts}>
+                Go back to all posts
+              </Link>
               {fetchError && <p>Error fetching page content</p>}
               <ReactMarkdown>{postMD}</ReactMarkdown>
               <hr />
