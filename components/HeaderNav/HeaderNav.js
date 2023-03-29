@@ -3,6 +3,7 @@ import style from './HeaderNav.module.scss'
 import { Container, Row, Col } from 'react-grid'
 import Logo from '../Logo/Logo'
 import { NavLink } from '../Link/Link'
+import NavList from '../NavList/NavList'
 
 const HeaderNav = () => {
   const header = `headerSize`
@@ -40,21 +41,7 @@ const HeaderNav = () => {
                 className={`${style.desktopNav} ${style.menuNav} ${toggle}`}
                 onClick={showSidebar}
               >
-                <li>
-                  <NavLink href="/">
-                    <span>Home</span>
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink href="/post">
-                    <span>Blog</span>
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink href="/contact-me">
-                    <span>Contact</span>
-                  </NavLink>
-                </li>
+                <NavList />
               </ul>
             </Col>
           </Row>

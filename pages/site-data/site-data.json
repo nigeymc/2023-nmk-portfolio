@@ -1,4 +1,18 @@
 {
+  "nav": [
+    {
+      "title": "Home",
+      "url": "/"
+    },
+    {
+      "title": "Blog",
+      "url": "/post"
+    },
+    {
+      "title": "Contact Me",
+      "url": "/contact-me"
+    }
+  ],
   "heroContent": {
     "title": "Niall McKenna",
     "subTitle": "FRONT END · ENGINEER · DESIGNER · LONDON",
