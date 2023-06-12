@@ -1,8 +1,10 @@
-import localFont from '@next/font/local'
+import { Poppins } from '@next/font/google'
 import style from './HeadingsParagraph.module.scss'
 
-const stolzl = localFont({
-  src: '../../pages/Stolzl-Medium.woff2',
+const poppinsMedium500 = Poppins({
+  weight: '500',
+  subsets: ['latin'],
+  display: 'swap',
 })
 
 const HeadingsParagraph = ({ content }) => {
@@ -10,7 +12,7 @@ const HeadingsParagraph = ({ content }) => {
 
   return (
     <div className={style.headingsParagraphWrapper}>
-      <h2 className={stolzl.className}>{heading}</h2>
+      <h2 className={poppinsMedium500.className}>{heading}</h2>
       {headingText && headingText.map((item, i) => <p key={i}>{item}</p>)}
     </div>
   )

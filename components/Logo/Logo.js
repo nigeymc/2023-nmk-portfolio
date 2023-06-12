@@ -1,9 +1,11 @@
 import Link from 'next/link'
 import style from './Logo.module.scss'
-import localFont from '@next/font/local'
+import { Poppins } from '@next/font/google'
 
-const stolzlBold = localFont({
-  src: '../../pages/Stolzl-Bold.woff2',
+const poppinsBold700 = Poppins({
+  weight: '700',
+  subsets: ['latin'],
+  display: 'swap',
 })
 
 const Logo = ({ context }) => {
@@ -11,7 +13,7 @@ const Logo = ({ context }) => {
 
   return (
     <span className={style.logoWhite}>
-      <Link className={`${stolzlBold.className} ${useContext}`} href="/">
+      <Link className={`${poppinsBold700.className} ${useContext}`} href="/">
         NMK
       </Link>
       <p id="logo" className="visuallyHidden">

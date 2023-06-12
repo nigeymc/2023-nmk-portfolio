@@ -7,10 +7,10 @@ import Card from '../BlogPostCard/Card'
 
 const MediumPosts = ({ loading, error, mediumPostsHeading, cardsContent }) => {
   const router = useRouter()
-
+  console.log(cardsContent)
   const [isLoaded, setIsLoaded] = useState(loading)
   const [fetchError, setFetchError] = useState(error)
-  const [feedData, setFeedData] = useState([])
+  const [feedData, setFeedData] = useState(cardsContent)
 
   useEffect(() => {
     setIsLoaded(loading)

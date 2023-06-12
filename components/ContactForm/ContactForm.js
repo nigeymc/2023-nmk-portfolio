@@ -105,10 +105,7 @@ const ContactForm = ({ content }) => {
           onSubmit={submitFormAndShowCaptcha}
         >
           <Row>
-            <div
-              className={style.content}
-              style={{ minHeight: '300px !important' }}
-            >
+            <div className={style.content}>
               <HeadingsParagraphs content={content} />
             </div>
           </Row>
@@ -180,10 +177,12 @@ const ContactForm = ({ content }) => {
         <Container>
           <Row>
             <div className={style.content}>
-              <ReCAPTCHA
-                sitekey="6Lfng2caAAAAAPH3mUIJVnJRqA7maIMWOdsTz0t2"
-                onChange={sendEmail}
-              />
+              <div className={style.captcha}>
+                <ReCAPTCHA
+                  sitekey="6Lfng2caAAAAAPH3mUIJVnJRqA7maIMWOdsTz0t2"
+                  onChange={sendEmail}
+                />
+              </div>
             </div>
           </Row>
         </Container>

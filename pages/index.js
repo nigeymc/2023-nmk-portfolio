@@ -70,6 +70,7 @@ export async function getStaticProps() {
       `https://medium2.p.rapidapi.com/article/${article_id}`,
       options,
     )
+
     const articleData = await article.json()
     articleDataArr.push(articleData)
 
@@ -79,8 +80,6 @@ export async function getStaticProps() {
     )
     const articleContent = await content.json()
     articleContentArr.push(articleContent)
-
-    // console.log(articleDataArr)
   }
 
   return {
@@ -91,7 +90,7 @@ export async function getStaticProps() {
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
     // - At most once every 10 seconds
-    revalidate: 86400, // In seconds
+    revalidate: 10, // In seconds
   }
 }
 

@@ -5,7 +5,7 @@ import { publishedAt } from '../../HelperFunctions/helpers'
 
 const Card = ({ postData }) => {
   const { image_url, title, subtitle, url, published_at } = postData
-  const lastIndexOfSlash = url.lastIndexOf('/')
+  const lastIndexOfSlash = url != undefined && url.lastIndexOf('/')
   const postPath = url.slice(lastIndexOfSlash)
 
   const datePublished = publishedAt(published_at)
@@ -24,7 +24,7 @@ const Card = ({ postData }) => {
             src={image_url}
             alt={`Blog post thumbnail for ${title}`}
             width={1200}
-            height={500}
+            height={1000}
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8+/H9GQAJewOrnloA8QAAAABJRU5ErkJggg=="
             placeholder="blur"
             loading="lazy"

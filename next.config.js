@@ -5,10 +5,6 @@ const path = require('path')
 const nextConfig = {
   // Your config here
   reactStrictMode: true,
-  i18n: {
-    locales: ['en'],
-    defaultLocale: 'en',
-  },
   images: {
     remotePatterns: [
       {

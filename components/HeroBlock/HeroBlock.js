@@ -1,13 +1,17 @@
 import style from './HeroBlock.module.scss'
-import localFont from '@next/font/local'
+import { Poppins } from '@next/font/google'
 import { Container, Row, Col } from 'react-grid'
 
-const stolzlBold = localFont({
-  src: '../../pages/Stolzl-Bold.woff2',
+const poppinsBold700 = Poppins({
+  weight: '700',
+  subsets: ['latin'],
+  display: 'swap',
 })
 
-const stolzlRegular = localFont({
-  src: '../../pages/Stolzl-Regular.woff2',
+const poppinsMedium500 = Poppins({
+  weight: '500',
+  subsets: ['latin'],
+  display: 'swap',
 })
 
 const HeroBlock = ({ title, subTitle }) => {
@@ -17,8 +21,8 @@ const HeroBlock = ({ title, subTitle }) => {
         <Row>
           <Col lg={6} md={6} sm={12} order={{ lg: 1, md: 1, xs: 2 }}>
             <div className={style.wrapper}>
-              <h1 className={stolzlBold.className}>{title}</h1>
-              <p className={stolzlRegular.className}>{subTitle}</p>
+              <h1 className={poppinsBold700.className}>{title}</h1>
+              <p className={poppinsMedium500.className}>{subTitle}</p>
             </div>
           </Col>
           <Col lg={6} md={6} sm={12} order={{ lg: 2, md: 2, xs: 1 }}>
