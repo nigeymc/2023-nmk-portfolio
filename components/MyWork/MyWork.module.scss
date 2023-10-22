@@ -18,6 +18,15 @@
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        -ms-flex-flow: row;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                flex-flow: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            position: relative;
+            height: 620px;
 
                 @media screen and (max-width: 992px) {
                     -webkit-box-orient: vertical;

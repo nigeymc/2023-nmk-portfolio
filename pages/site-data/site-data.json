@@ -40,7 +40,7 @@
   "myWorkContent": {
     "heading": "My Work & Projects",
     "headingText": [
-      "Here's a selection of my most recent publicly available work and projects."
+      "Some my most recent work and projects."
     ],
     "cards": [
       {
@@ -48,8 +48,8 @@
         "heading": "JMK Security Website",
         "text": "I designed and built this website for JMK Security in 2021. The website is using decoupled Wordpress as a Content Management System and the Frontity framework for delivering a React front end for decoupled Wordpress.",
         "labels": ["Tech stack", "Features"],
-        "techStack": "Wordpress CMS, Frontity, ReactStrap, ReactJS, Styled Components",
-        "features": "Content Management System, Contact Form",
+        "techStack": ["Wordpress CMS", "Frontity", "ReactStrap", "ReactJS", "Styled Components"],
+        "features": ["Content Management System", "Contact Form"],
         "githubLabel": "Github repository",
         "githubLink": "https://github.com/nigeymc/JMK-Security-Web-App",
         "websiteLink": "https://jmksecurity.net/"
@@ -59,8 +59,8 @@
         "heading": "Reservation Calendar UI",
         "text": "I designed and built this UI for a reservation system for Royal Borough of Greenwich council. The UI is an ES6 app that fetches data from a PHP and SQL backend and allows the user to reserve two 1 hour appointments twice per day.",
         "labels": ["Tech stack", "Features"],
-        "techStack": "ES6, Webpack, Babel, Unfetch",
-        "features": "ES6 app, Reservation system, Date change controls, WCAG accessible",
+        "techStack": ["ES6", "Webpack", "Babel", "Unfetch"],
+        "features": ["ES6 app", "Reservation system", "Date change controls", "WCAG accessible"],
         "githubLabel": "Github repository",
         "githubLink": "https://github.com/nigeymc/Booking-Calendar-Front-End",
         "websiteLink": "https://www.royalgreenwich.gov.uk/xfp/form/810 "

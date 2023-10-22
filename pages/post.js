@@ -53,6 +53,7 @@ export async function getStaticProps() {
   const article_ids = data.associated_articles
   const articleDataArr = []
   const articleContentArr = []
+  
   for (const article_id of article_ids) {
     let article = await fetch(
       `https://medium2.p.rapidapi.com/article/${article_id}`,

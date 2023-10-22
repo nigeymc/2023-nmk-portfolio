@@ -1,7 +1,7 @@
 import style from './MyWork.module.scss'
 import { Container, Row, Col } from 'react-grid'
 import HeadingsParagraph from '../HeadingsParagraphs/HeadingsParagraph'
-import Card from '../Card/Card'
+import ProjectsCard from '../ProjectsCard/ProjectsCard'
 
 const MyWork = ({ content }) => {
   const { heading, headingText, cards } = content
@@ -15,7 +15,7 @@ const MyWork = ({ content }) => {
         <Row>
           <div className={style.cardsContainer}>
             {cards.map((item, i) => (
-              <Card key={i} content={item} />
+              <ProjectsCard key={i} content={item} />
             ))}
           </div>
         </Row>
