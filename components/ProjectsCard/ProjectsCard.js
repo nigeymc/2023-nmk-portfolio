@@ -13,6 +13,7 @@ const ProjectsCard = ({ content }) => {
     githubLabel,
     githubLink,
     websiteLink,
+    status,
   } = content
 
   const [techStackLabel, featuresLabel] = labels
@@ -20,14 +21,28 @@ const ProjectsCard = ({ content }) => {
   const featuresList = features.map((item, i) => <li key={i}>{item}</li>)
 
   return (
-    <div className={style.flipContainer}>
-      <div class={style.flipper}>
-        <div class={style.front}>
-          <span className={style.imageLabel}>{heading}</span>
-          <Image src={image} alt={heading} width={600} height={540} />
+    <div className={style.flipContainer} tabIndex={0}>
+      <div className={style.flipper}>
+        <div className={style.front}>
+          <span className={style.imageLabel}>
+            <span>{heading}</span>
+          </span>
+          <Image
+            src={image}
+            alt={heading}
+            width={600}
+            height={540}
+            quality="85"
+            loading="lazy"
+          />
         </div>
-        <div class={style.back}>
+        <div className={style.back}>
           <h3>{heading}</h3>
+          <span className={style.status}>
+            <p>
+              <em>{status}</em>
+            </p>
+          </span>
           <p>{text}</p>
           <h4>{techStackLabel}</h4>
           <ul>{techList}</ul>
@@ -46,38 +61,6 @@ const ProjectsCard = ({ content }) => {
         </div>
       </div>
     </div>
-
-    // <section className={style.card}>
-    //   <div className={style.imageContainer}>
-    //     <Image
-    //       src={image}
-    //       alt={`Thumbnail image of ${heading}`}
-    //       loading="lazy"
-    //       layout="fill"
-    //       className={style.image}
-    //     ></Image>
-    //   </div>
-    //   <div className={style.content}>
-    //     <h3>{heading}</h3>
-    //     <p>{text}</p>
-    //     <h4>{techStackLabel}</h4>
-    //     <ul>
-    //       {techList}
-    //     </ul>
-    //     <h4>{featuresLabel}</h4>
-    //     <ul>{featuresList}</ul>
-    //     <div className={style.links}>
-    //       <Link href={githubLink}>
-    //         <span className={style.linkText}>{githubLabel}</span>
-    //         <span className={style.chevron}></span>
-    //       </Link>
-    //       <Link target="_blank" href={websiteLink.trim()}>
-    //         <span className={style.linkText}>{heading}</span>
-    //         <span className={style.chevron}></span>
-    //       </Link>
-    //     </div>
-    //   </div>
-    // </section>
   )
 }
 
