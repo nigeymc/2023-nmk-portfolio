@@ -27,14 +27,19 @@ const ProjectsCard = ({ content }) => {
           <span className={style.imageLabel}>
             <span>{heading}</span>
           </span>
-          <Image
-            src={image}
-            alt={heading}
-            width={600}
-            height={540}
-            quality="85"
-            loading="lazy"
-          />
+          <div className={style.image}>
+            <Image
+              src={image}
+              alt={heading}
+              fill
+              quality="85"
+              loading="lazy"
+              style={{
+                objectFit: 'contain',
+                objectPosition: 'top',
+              }}
+            />
+          </div>
         </div>
         <div className={style.back}>
           <h3>{heading}</h3>
@@ -44,10 +49,17 @@ const ProjectsCard = ({ content }) => {
             </p>
           </span>
           <p>{text}</p>
-          <h4>{techStackLabel}</h4>
-          <ul>{techList}</ul>
-          <h4>{featuresLabel}</h4>
-          <ul>{featuresList}</ul>
+          <div className={style.lists}>
+            <div className={style.list}>
+              <h4>{techStackLabel}</h4>
+              <ul>{techList}</ul>
+            </div>
+
+            <div className={style.list}>
+              <h4>{featuresLabel}</h4>
+              <ul>{featuresList}</ul>
+            </div>
+          </div>
           <div className={style.links}>
             <Link href={githubLink}>
               <span className={style.linkText}>{githubLabel}</span>

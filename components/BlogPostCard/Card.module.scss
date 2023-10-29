@@ -1,16 +1,38 @@
 @use '../../styles/variables';
 
 .card {
+    max-width: 360px;
+    width: 100%;
     height: auto;
     margin-bottom: 25px;
+    background-color: variables.$pinkAccent;
     border: solid 1px variables.$primaryBlue;
-    background-color: variables.$primaryBlue;
+    border-bottom: solid 20px variables.$primaryBlue;
     text-decoration: none;
     -webkit-transition: -webkit-transform .3s ease-out;
     transition: -webkit-transform .3s ease-out;
     -o-transition: transform .3s ease-out;
     transition: transform .3s ease-out;
     transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+    grid-column: span 4;
+    position: relative;
+
+    &:after {
+        height: 0px;
+        width: 0px;
+        position: absolute;
+        border-right: solid 25px transparent;
+        border-left: solid 25px transparent;
+        border-bottom: solid 25px variables.$primaryBlue;
+        content: "";
+        bottom: 0;
+        left: calc(50% - 25px);
+    }
+
+    @media screen and (max-width: 992px) {
+        grid-column: 1/span 12;
+        max-width: 960px;
+    }
 
     &:hover {
         -webkit-transform: translateY(-10px);
@@ -26,41 +48,29 @@
 
     .image {
         width: 100%;
-        height: 250px;
+        padding-bottom: 800px / 1100px * 100%;
         position: relative;
-        background-color: variables.$primary-white;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        background-color: variables.$primary-white;
+        background-image: -o-linear-gradient(45deg, transparent 49%, variables.$primaryBlue 50%, transparent 51%);
+        background-image: linear-gradient(45deg, transparent 49%, variables.$primaryBlue 50%, transparent 51%);
+        background-size: 5px 5px;
 
         > div {
             position: unset !important;
         }
        
-        &:after {
-            width: 100%;
-            height: 20px;
-            content: "";
-            position: absolute;
-            left: 0;
-            display: block;
-            background-color: variables.$primary-white;
-            background-image: -o-linear-gradient(45deg, transparent 49%, variables.$primaryBlue 50%, transparent 51%);
-            background-image: linear-gradient(45deg, transparent 49%, variables.$primaryBlue 50%, transparent 51%);
-            background-size: 5px 5px;
-            right: -1rem;
-            bottom: -1rem;
-            z-index: 1;
-        }
     }
 
     .content {
         background-color: variables.$pinkAccent;
         width: 100%;
-        height: 250px;
-        @media screen and (max-width: 1200px) {
-            height: 300px;
-        }
+        // height: 250px;
+        // @media screen and (max-width: 1200px) {
+        //     height: 300px;
+        // }
         padding: 25px;
         margin-bottom: 10px;
         display: -webkit-box;
@@ -99,17 +109,6 @@
 
         .description {
             font-style: italic;
-            height: 540px;
-            @media screen and (max-width: 1200px) {
-                height: 380px;
-            }
-            @media screen and (max-width: 992px) {
-                margin-top: 10px;
-                height: 540px;
-            }
-            @media screen and (max-width: 768px) {
-                height: 400px;
-            }
         }
 
     }

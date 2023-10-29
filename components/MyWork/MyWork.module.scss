@@ -20,9 +20,11 @@
         grid-column-gap: 25px;
         grid-row-gap: 50px;
         position: relative;
+        width: 100%;
 
         @media screen and (max-width: 992px) {
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: -webkit-min-content;
+            grid-template-columns: min-content;
         }
     }
     

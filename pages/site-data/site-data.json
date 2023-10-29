@@ -49,7 +49,6 @@
         "techStack": [
           "Wordpress CMS",
           "Frontity",
-          "ReactStrap",
           "ReactJS",
           "Styled Components"
         ],
@@ -62,13 +61,30 @@
       {
         "image": "/img/cards/our-greenwich.jpg",
         "heading": "Our Greenwich Plan Website",
-        "text": "I built this as a static website in NextJS with React components.",
+        "text": "A static microsite built for Greenwich Council in NextJS using React components.",
         "labels": ["Tech stack", "Features"],
         "techStack": ["NextJS", "React"],
         "features": ["Static website", "React components"],
         "githubLabel": "Github repository",
         "githubLink": "https://gitlab.com/rbgreenwich/dev/our-greenwich-microsite",
         "websiteLink": "https://ourgreenwich.org.uk/ ",
+        "status": "A Greenwich Council project"
+      },
+      {
+        "image": "/img/cards/component-library.jpg",
+        "heading": "Component Library",
+        "text": "A component library for the Greenwich Council Design System. The library currently serves the council's Drupal websites. The component library will eventually contain components for all of Greenwich council's primary (Local Gov Drupal, PHP, Twig, AWS) and secondary (Javascript, React, NextJS, AWS) tech stacks.",
+        "labels": ["Tech stack", "Features"],
+        "techStack": [
+          "Drupal / Twig / Wingsuit",
+          "SCSS",
+          "Storybook",
+          "Javascript"
+        ],
+        "features": ["UI Components", "UI Patterns", "Storybook library"],
+        "githubLabel": "Github repository",
+        "githubLink": "https://gitlab.com/rbgreenwich/dev/design_system",
+        "websiteLink": "https://github.com/nigeymc/Booking-Calendar-Front-End ",
         "status": "A Greenwich Council project"
       },
       {

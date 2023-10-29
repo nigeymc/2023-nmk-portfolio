@@ -20,14 +20,17 @@ const Card = ({ postData }) => {
       <div className={style.image}>
         {image_url && (
           <Image
-            className={style.image}
             src={image_url}
             alt={`Blog post thumbnail for ${title}`}
-            width={1200}
-            height={250}
+            fill
+            quality="85"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8+/H9GQAJewOrnloA8QAAAABJRU5ErkJggg=="
             placeholder="blur"
             loading="lazy"
+            style={{
+              objectFit: 'contain',
+              objectPosition: 'center',
+            }}
           />
         )}
       </div>
