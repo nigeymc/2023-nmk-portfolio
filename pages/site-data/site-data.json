@@ -39,31 +39,70 @@
   },
   "myWorkContent": {
     "heading": "My Work & Projects",
-    "headingText": [
-      "Here's a selection of my most recent publicly available work and projects."
-    ],
+    "headingText": ["Some my most recent work and projects."],
     "cards": [
       {
         "image": "/img/cards/jmk.jpg",
         "heading": "JMK Security Website",
-        "text": "I designed and built this website for JMK Security in 2021. The website is using decoupled Wordpress as a Content Management System and the Frontity framework for delivering a React front end for decoupled Wordpress.",
+        "text": "I designed and built this website for JMK Security. The website is using decoupled Wordpress as a Content Management System and the Frontity framework for delivering a React front end for decoupled Wordpress.",
         "labels": ["Tech stack", "Features"],
-        "techStack": "Wordpress CMS, Frontity, ReactStrap, ReactJS, Styled Components",
-        "features": "Content Management System, Contact Form",
+        "techStack": [
+          "Wordpress CMS",
+          "Frontity",
+          "ReactJS",
+          "Styled Components"
+        ],
+        "features": ["Content Management System", "Contact Form"],
         "githubLabel": "Github repository",
         "githubLink": "https://github.com/nigeymc/JMK-Security-Web-App",
-        "websiteLink": "https://jmksecurity.net/"
+        "websiteLink": "https://jmksecurity.net/",
+        "status": "A freelance project"
+      },
+      {
+        "image": "/img/cards/our-greenwich.jpg",
+        "heading": "Our Greenwich Plan Website",
+        "text": "A static microsite built for Greenwich Council in NextJS using React components.",
+        "labels": ["Tech stack", "Features"],
+        "techStack": ["NextJS", "React"],
+        "features": ["Static website", "React components"],
+        "githubLabel": "Github repository",
+        "githubLink": "https://gitlab.com/rbgreenwich/dev/our-greenwich-microsite",
+        "websiteLink": "https://ourgreenwich.org.uk/ ",
+        "status": "A Greenwich Council project"
+      },
+      {
+        "image": "/img/cards/component-library.jpg",
+        "heading": "Component Library",
+        "text": "A component library for the Greenwich Council Design System. The library currently serves the council's Drupal websites. The component library will eventually contain components for all of Greenwich council's primary (Local Gov Drupal, PHP, Twig, AWS) and secondary (Javascript, React, NextJS, AWS) tech stacks.",
+        "labels": ["Tech stack", "Features"],
+        "techStack": [
+          "Drupal / Twig / Wingsuit",
+          "SCSS",
+          "Storybook",
+          "Javascript"
+        ],
+        "features": ["UI Components", "UI Patterns", "Storybook library"],
+        "githubLabel": "Github repository",
+        "githubLink": "https://gitlab.com/rbgreenwich/dev/design_system",
+        "websiteLink": "https://github.com/nigeymc/Booking-Calendar-Front-End ",
+        "status": "A Greenwich Council project"
       },
       {
         "image": "/img/cards/booking-calendar.jpg",
         "heading": "Reservation Calendar UI",
         "text": "I designed and built this UI for a reservation system for Royal Borough of Greenwich council. The UI is an ES6 app that fetches data from a PHP and SQL backend and allows the user to reserve two 1 hour appointments twice per day.",
         "labels": ["Tech stack", "Features"],
-        "techStack": "ES6, Webpack, Babel, Unfetch",
-        "features": "ES6 app, Reservation system, Date change controls, WCAG accessible",
+        "techStack": ["ES6", "Webpack", "Babel", "Unfetch"],
+        "features": [
+          "ES6 app",
+          "Reservation system",
+          "Date change controls",
+          "WCAG accessible"
+        ],
         "githubLabel": "Github repository",
         "githubLink": "https://github.com/nigeymc/Booking-Calendar-Front-End",
-        "websiteLink": "https://www.royalgreenwich.gov.uk/xfp/form/810 "
+        "websiteLink": "https://www.royalgreenwich.gov.uk/xfp/form/810 ",
+        "status": "A Greenwich Council project"
       }
     ]
   },

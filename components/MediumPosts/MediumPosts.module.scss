@@ -15,18 +15,11 @@
             
     .cardsContainer {
         display: grid;
-        grid-column-gap: 15px;
+        grid-column-gap: 25px;
         grid-row-gap: 15px;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(12, 30fr);
         margin: 0 auto 15px;
         padding: 25px 0;
-
-        @media screen and (max-width: 992px) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        @media screen and (max-width: 768px) {
-            grid-template-columns: repeat(1, 1fr);
-        }   
     }
     
 }
