@@ -45,7 +45,9 @@
     border: 10px solid;
     border-image-slice: 1;
     border-width: 10px;
-    border-image-source: linear-gradient(to bottom, variables.$greenAccent, rgba(0, 0, 0, 0));
+    -webkit-border-image: -webkit-gradient(to bottom, variables.$greenAccent, rgba(0, 0, 0, 0));
+    -webkit-border-image: -ms-gradient(to bottom, variables.$greenAccent, rgba(0, 0, 0, 0));
+    border-image: linear-gradient(to bottom, variables.$greenAccent, rgba(0, 0, 0, 0));
     border-style: solid;
     border-right: none;
     border-bottom: none;
