@@ -46,6 +46,7 @@
     border-image-slice: 1;
     border-width: 10px;
     border-image-source: linear-gradient(to bottom, variables.$greenAccent, rgba(0, 0, 0, 0));
+    border-style: solid;
     border-right: none;
     border-bottom: none;
     position: relative;
