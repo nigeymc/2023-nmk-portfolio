@@ -1,11 +1,11 @@
 import IntroBlock from '../components/IntroBlock/IntroBlock'
 import MyWork from '../components/MyWork/MyWork'
 import HeroBlock from '../components/HeroBlock/HeroBlock'
-import MediumPosts from '../components/MediumPosts/MediumPosts'
+import HomepageFeed from '../components/HomepageFeed/HomepageFeed'
 
 import siteData from './site-data/site-data.json'
 
-const Home = ({ loading, error, articleDataArr }) => {
+const Home = ({ loading, error, dataFeed }) => {
   const {
     heroContent,
     fileDetails,
@@ -23,9 +23,9 @@ const Home = ({ loading, error, articleDataArr }) => {
       />
       <IntroBlock fileDetails={fileDetails} content={introContent} />
       <MyWork content={myWorkContent} />
-      <MediumPosts
+      <HomepageFeed
         mediumPostsHeading={mediumPostsHeading}
-        cardsContent={articleDataArr}
+        cardsContent={dataFeed}
         loading={loading}
         error={error}
       />
@@ -36,18 +36,10 @@ const Home = ({ loading, error, articleDataArr }) => {
 export async function getStaticProps() {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library
-  const user_id = `dd8b42234ded`
-  const url = `https://medium2.p.rapidapi.com/user/${user_id}/articles`
 
-  const options = {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Key': process.env.API_KEY,
-      'X-RapidAPI-Host': 'medium2.p.rapidapi.com',
-    },
-  }
+  const url = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@mckenna.niall`
 
-  const res = await fetch(url, options)
+  const res = await fetch(url)
     .catch((e) => {
       console.error('Error fetching data', e)
       return {
@@ -61,36 +53,16 @@ export async function getStaticProps() {
     })
 
   const data = await res.json()
-  const article_ids = data.associated_articles
-
-  const articleDataArr = []
-  const articleContentArr = []
-  for (const article_id of article_ids) {
-    let article = await fetch(
-      `https://medium2.p.rapidapi.com/article/${article_id}`,
-      options,
-    )
-
-    const articleData = await article.json()
-    articleDataArr.push(articleData)
-
-    let content = await fetch(
-      `https://medium2.p.rapidapi.com/article/${article_id}/content`,
-      options,
-    )
-    const articleContent = await content.json()
-    articleContentArr.push(articleContent)
-  }
+  const dataFeed = data.items
 
   return {
     props: {
-      articleDataArr,
-      articleContentArr,
+      dataFeed,
     },
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
-    // - At most once every 10 seconds
-    revalidate: 10, // In seconds
+    // - At most once every 24 hours
+    revalidate: 86400, // In seconds
   }
 }
 

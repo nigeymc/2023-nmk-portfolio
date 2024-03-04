@@ -19,6 +19,7 @@ export const publishedAt = (published_at) => {
     'July',
     'August',
     'September',
+    'October',
     'November',
     'December',
   ]

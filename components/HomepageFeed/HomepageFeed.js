@@ -1,20 +1,20 @@
 import { useRouter } from 'next/router'
 import React, { useState, useEffect } from 'react'
 import style from './MediumPosts.module.scss'
-import { Container, Row, Col } from 'react-grid'
+import { Container, Row } from 'react-grid'
 import HeadingsParagraph from '../HeadingsParagraphs/HeadingsParagraph'
-import Card from '../BlogPostCard/Card'
+import HomepageCard from '../HomepageCard/HomepageCard'
 
 const MediumPosts = ({ loading, error, mediumPostsHeading, cardsContent }) => {
   const router = useRouter()
   const [isLoaded, setIsLoaded] = useState(loading)
   const [fetchError, setFetchError] = useState(error)
-  const [feedData, setFeedData] = useState(cardsContent)
+  const [dataFeed, setDataFeed] = useState(cardsContent)
 
   useEffect(() => {
     setIsLoaded(loading)
     setFetchError(error)
-    setFeedData(cardsContent)
+    setDataFeed(cardsContent)
   }, [loading, error, cardsContent])
 
   return (
@@ -26,11 +26,9 @@ const MediumPosts = ({ loading, error, mediumPostsHeading, cardsContent }) => {
         <Row>
           {fetchError && <p>Error fetching page content</p>}
           <div className={style.cardsContainer}>
-            {router.pathname !== '/post'
-              ? feedData
-                  .slice(0, 6)
-                  .map((item) => <Card key={item.id} postData={item} />)
-              : feedData.map((item) => <Card key={item.id} postData={item} />)}
+            {dataFeed.map((item) => (
+              <HomepageCard key={item.id} postData={item} />
+            ))}
           </div>
         </Row>
       </Container>
